@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #FFD7C8, #FFE3E0);
+    color: #333333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header Section */
+  .header {
+    background: linear-gradient(120deg, #FF7EB3, #FF758C);
+    text-align: center;
+    color: #f8f8f8;
+    padding: 50px 20px;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .header p {
+    font-size: 1.5rem;
+    font-style: italic;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Keyframes for header animation */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Timeline Section */
+  .timeline-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #FFF2E7;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .timeline-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #D08159;
+    font-size: 2rem;
+  }
+  
+  /* Timeline Layout */
+  .timeline {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background-color: #D08159;
+    transform: translateX(-50%);
+    animation: growLine 2s ease-in-out;
+  }
+  
+  @keyframes growLine {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  /* Timeline Items */
+  .timeline li {
+    position: relative;
+    margin: 30px 0;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: slideIn 1.5s ease-in-out;
+  }
+  
+  .timeline li:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline li:nth-child(even) {
+    left: 50%;
+  }
+  
+  .timeline li:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .timeline li .date {
+    font-size: 1.2rem;
+    color: #D08159;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in;
+  }
+  
+  .timeline li .content {
+    background: #FFE3E0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(208, 129, 89, 0.2);
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .timeline li .content h3 {
+    font-size: 1.3rem;
+    color: #FF7EB3;
+  }
+  
+  .timeline li .content p {
+    font-size: 1rem;
+    color: #333333;
+    font-style: italic;
+  }
+  
+  /* Hover Effect for Content */
+  .timeline li:hover .content {
+    box-shadow: 0 8px 25px rgba(255, 120, 179, 0.3);
+  }
+  
+  .timeline li:hover .date {
+    color: #FF758C;
+  }
+  
+  /* Side Cards */
+  .side-card {
+    background: #FFE3E0;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(208, 129, 89, 0.3);
+    margin: 20px 0;
+  }
+  
+  .side-card h3 {
+    color: #D08159;
+  }
+  
+  .side-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Scroll-to-Top Button */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FF7EB3;
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 6px 20px rgba(255, 120, 179, 0.3);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #FF5A87;
+    transform: scale(1.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
